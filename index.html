@@ -1,88 +1,352 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politechnic Suggestion 2026 - Official App</title>
+    <title>Politechnic Suggestion 2026 - ডিপ্লোমা শিক্ষার্থীদের অফিসিয়াল অ্যাপ</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://cdn.imgchest.com/files/618cddd1d9ab.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font: Hind Siliguri -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Hind Siliguri', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); }
+        .glow { box-shadow: 0 0 50px -10px rgba(79, 70, 229, 0.4); }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-600 selection:text-white">
 
-    <!-- Header -->
-    <header class="w-full border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-5 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <img src="https://cdn.imgchest.com/files/618cddd1d9ab.png" alt="Logo" class="w-9 h-9 rounded-xl shadow border border-slate-700 object-cover">
-                <span class="font-bold text-base md:text-lg text-white">Politechnic Suggestion</span>
+    <!-- Top Alert Bar -->
+    <div class="bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-md">
+        <span>🔥 ২০২৬ সালের নতুন সিলেবাস অনুযায়ী সকল ডিপার্টমেন্টের সুপার সাজেশন অ্যাপে যুক্ত করা হয়েছে!</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="w-full border-b border-slate-800/80 glass sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 space-x-reverse">
+                <img src="https://cdn.imgchest.com/files/618cddd1d9ab.png" alt="Logo" class="w-10 h-10 rounded-xl shadow border border-slate-700 object-cover">
+                <div>
+                    <span class="font-bold text-lg text-white tracking-wide block leading-none">Politechnic Suggestion</span>
+                    <span class="text-[10px] text-indigo-400 font-semibold uppercase tracking-wider">Diploma in Engineering</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#features" class="hover:text-white transition">ফিচারসমূহ</a>
+                <a href="#departments" class="hover:text-white transition">ডিপার্টমেন্ট</a>
+                <a href="#install" class="hover:text-white transition">ইনস্টল গাইড</a>
+                <a href="#faq" class="hover:text-white transition">প্রশ্নোত্তর</a>
             </div>
-            <span class="text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full font-semibold">
-                Version 1.0
-            </span>
+
+            <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="hidden sm:inline-flex items-center px-4 py-2 text-xs md:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition shadow-lg shadow-indigo-600/30">
+                <i class="fab fa-android mr-2 text-green-400 text-base"></i> ডাউনলোড APK
+            </a>
         </div>
     </header>
 
-    <!-- Hero Content -->
-    <main class="max-w-3xl mx-auto px-5 py-12 text-center flex-grow flex flex-col items-center justify-center">
-        <!-- Logo -->
-        <div class="relative mb-6">
-            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-60"></div>
-            <img src="https://cdn.imgchest.com/files/618cddd1d9ab.png" alt="Politechnic Suggestion 2026" class="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl shadow-2xl border border-slate-700 bg-slate-800 object-cover">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
+        <!-- Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-indigo-600/25 blur-[140px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-5 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Side -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs px-3 py-1.5 rounded-full mb-6 font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                        ১ম থেকে ৮ম সেমিস্টার সম্পূর্ণ কভার
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] mb-6">
+                        বোর্ড সমাপনী পরীক্ষায় <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">A+ নিশ্চিত করার</span> সেরা ডিজিটাল সহায়িকা!
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        বাংলাদেশ কারিগরি শিক্ষা বোর্ডের সর্বশেষ সিলেবাস অনুযায়ী ডিপ্লোমা ইন ইঞ্জিনিয়ারিং শিক্ষার্থীদের সেরা সাজেশন, সংক্ষিপ্ত ও রচনামূলক প্রশ্ন এবং বিগত ৫ বছরের বোর্ড সমাধান এখন হাতের মুঠোয়।
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-2xl shadow-xl shadow-indigo-600/30 hover:scale-105 active:scale-95 transition-all duration-200">
+                            <i class="fab fa-android text-2xl mr-3 text-green-400"></i>
+                            <span>সরাসরি ডাউনলোড (11 MB)</span>
+                        </a>
+
+                        <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-slate-300 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:text-white rounded-2xl transition">
+                            <i class="fas fa-info-circle mr-2 text-indigo-400"></i> ফিচার জানুন
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-400">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-shield-alt text-emerald-400"></i> ভাইরাস ও অ্যাড মুক্ত</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-bolt text-yellow-400"></i> সুপারফাস্ট ডাউনলোড</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-wifi text-cyan-400"></i> অফলাইনে পড়ার সুবিধা</span>
+                    </div>
+                </div>
+
+                <!-- Right Visual Side / Phone Mockup Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Glow Background -->
+                        <div class="absolute -inset-1 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-[2.5rem] blur-xl opacity-40"></div>
+                        
+                        <!-- App Card Container -->
+                        <div class="relative bg-slate-900/90 border border-slate-800 p-6 rounded-[2rem] shadow-2xl glass text-center">
+                            <img src="https://cdn.imgchest.com/files/618cddd1d9ab.png" alt="Politechnic Suggestion App Icon" class="w-28 h-28 mx-auto rounded-3xl shadow-xl border border-slate-700 bg-slate-950 p-2 object-cover mb-4">
+                            
+                            <h3 class="text-xl font-bold text-white mb-1">Politechnic Suggestion 2026</h3>
+                            <p class="text-xs text-indigo-400 font-medium mb-4">Official Edition for BTEB Students</p>
+
+                            <div class="grid grid-cols-3 gap-2 py-4 border-y border-slate-800 mb-5 text-center">
+                                <div>
+                                    <span class="text-xs text-slate-500 block">ভার্সন</span>
+                                    <span class="font-bold text-sm text-white">v1.0</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">সাইজ</span>
+                                    <span class="font-bold text-sm text-white">11.0 MB</span>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 block">রেটিং</span>
+                                    <span class="font-bold text-sm text-yellow-400 flex items-center justify-center gap-1">
+                                        5.0 <i class="fas fa-star text-xs"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="w-full block py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold text-sm transition shadow-lg shadow-indigo-600/30">
+                                <i class="fas fa-download mr-2"></i> এখনই ইন্সটল করুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="border-y border-slate-800/80 bg-slate-900/40 py-10">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <span class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">১ম - ৮ম</span>
+                <p class="text-slate-400 text-xs md:text-sm mt-1">সকল সেমিস্টার অন্তর্ভুক্ত</p>
+            </div>
+            <div>
+                <span class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">৭+</span>
+                <p class="text-slate-400 text-xs md:text-sm mt-1">প্রধান প্রধান টেকনোলজি</p>
+            </div>
+            <div>
+                <span class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">৯৫%+</span>
+                <p class="text-slate-400 text-xs md:text-sm mt-1">কমন উপযোগী সুপার টিপস</p>
+            </div>
+            <div>
+                <span class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">১০০%</span>
+                <p class="text-slate-400 text-xs md:text-sm mt-1">সম্পূর্ণ ফ্রি পড়াশোনার সুযোগ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">সেরা সুবিধাগুলো</span>
+            <h2 class="text-3xl font-extrabold text-white mt-3 mb-4">কেন আমাদের অ্যাপটি প্রতিটি শিক্ষার্থীর প্রয়োজন?</h2>
+            <p class="text-slate-400 text-sm md:text-base">পলিটেকনিক পড়াশোনার চাপ কমাতে এবং অল্প সময়ে সেরা প্রস্তুতির জন্য অ্যাপটি সুনির্দিষ্টভাবে তৈরি।</p>
         </div>
 
-        <h1 class="text-2xl md:text-4xl font-extrabold text-white mb-3">
-            Politechnic Suggestion <span class="text-blue-500">2026</span>
-        </h1>
-        <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            পলিটেকনিক শিক্ষার্থীদের বোর্ড পরীক্ষার চূড়ান্ত প্রস্তুতি, সকল বিভাগের বিষয়ভিত্তিক সুপার সাজেশন ও বিগত বছরের প্রশ্নের সমাধান এবার এক অ্যাপে!
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">অধ্যায়ভিত্তিক সুপার সাজেশন</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">বোর্ড পরীক্ষার মানবণ্টন অনুযায়ী প্রতিটি বিষয়ের অতি সংক্ষিপ্ত, সংক্ষিপ্ত এবং রচনামূলক অতি গুরুত্বপূর্ণ প্রশ্নাবলি।</p>
+            </div>
 
-        <!-- Direct Download Button -->
-        <div class="w-full max-w-xs">
-            <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="w-full inline-flex items-center justify-center px-6 py-4 text-base md:text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 rounded-2xl shadow-xl hover:shadow-blue-500/30 hover:scale-105 active:scale-95 transition-all duration-200">
-                <i class="fab fa-android text-2xl mr-3 text-green-400"></i>
-                <span>ডাউনলোড করুন (11 MB)</span>
-            </a>
-            <p class="text-slate-500 text-xs mt-3 flex items-center justify-center gap-1">
-                <i class="fas fa-shield-alt text-emerald-400"></i> ১০০% নিরাপদ ও ডিরেক্ট ডাউনলোড
-            </p>
+            <!-- Feature 2 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">বিগত বছরের বোর্ড প্রশ্ন সমাধান</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">বিগত বিভিন্ন সালের বোর্ড সমাপনী পরীক্ষার প্রশ্ন ও নির্ভরযোগ্য সমাধান, যা প্রশ্নের প্যাটার্ন বুঝতে সাহায্য করে।</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">অফলাইন পড়ার নিশ্চয়তা</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">একবার ডাউনলোড করার পর যেকোনো সময় ইন্টারনেট কানেকশন ছাড়াই অফলাইনে বসে নিশ্চিন্তে রিভিশন দেওয়ার সুবিধা।</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">সব ডিপার্টমেন্টের বিষয়</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">সাধারণ নন-টেক বিষয় (ম্যাথ, ফিজিক্স, কেমিস্ট্রি, ইংলিশ) থেকে শুরু করে প্রতিটি ডিপার্টমেন্টের কোর টেকনোলজি বিষয়।</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">লাইটওয়েট ও মসৃণ অ্যাপ</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">সাইজ মাত্র ১১ মেগাবাইট! কম র‍্যাম ও সাধারণ স্মার্টফোনেও কোনো ল্যাগ ছাড়াই দারুণ গতিতে কাজ করবে।</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition duration-300">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-2xl mb-5">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">সর্বশেষ ২০২৬ সিলেবাস আপডেট</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">কারিগরি শিক্ষা বোর্ডের আপডেটেড প্রবিধান এবং সিলেবাস পর্যালোচনা করে নিয়মিত কন্টেন্ট আপডেট করা হয়।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Covered Section -->
+    <section id="departments" class="py-16 bg-slate-900/30 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-3">যেসব ডিপার্টমেন্টের সাজেশন পাচ্ছেন</h2>
+            <p class="text-slate-400 text-sm mb-10">আপনার টেকনোলজি অনুযায়ী বিষয়গুলো অ্যাপের ভেতরে সুন্দরভাবে সাজানো রয়েছে</p>
+
+            <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-laptop-code text-indigo-400 mr-2"></i>Computer Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-building text-blue-400 mr-2"></i>Civil Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-bolt text-yellow-400 mr-2"></i>Electrical Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-cogs text-orange-400 mr-2"></i>Mechanical Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-microchip text-emerald-400 mr-2"></i>Electronics Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-tshirt text-pink-400 mr-2"></i>Textile Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-car text-cyan-400 mr-2"></i>Automobile Technology</span>
+                <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-sm font-semibold text-slate-200"><i class="fas fa-book text-purple-400 mr-2"></i>সকল নন-টেক বিষয় (ম্যাথ, ফিজিক্স ইত্যাদি)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Steps Section -->
+    <section id="install" class="py-20 max-w-5xl mx-auto px-5">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-2">কীভাবে অ্যাপটি ইন্সটল করবেন?</h2>
+            <p class="text-slate-400 text-sm">সহজ ৩টি ধাপে আপনার ফোনে অ্যাপটি চালু করুন</p>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 w-full text-left">
-            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-                <i class="fas fa-book-reader text-blue-400 text-xl mb-3 block"></i>
-                <h3 class="font-bold text-white text-base mb-1">সকল বিভাগের সাজেশন</h3>
-                <p class="text-slate-400 text-xs">সিভিল, কম্পিউটার, ইলেকট্রিক্যাল সহ সব টেকনোলজির জন্য তৈরি।</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+                <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">১</div>
+                <h3 class="text-base font-bold text-white mb-2">ডাউনলোড বাটনে চাপুন</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">ওয়েবসাইটের "ডাউনলোড APK" বাটনে ক্লিক করে ১১ মেগাবাইটের ফাইলটি ডাউনলোড করে নিন।</p>
             </div>
 
-            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-                <i class="fas fa-file-invoice text-indigo-400 text-xl mb-3 block"></i>
-                <h3 class="font-bold text-white text-base mb-1">বোর্ড প্রশ্ন ও উত্তর</h3>
-                <p class="text-slate-400 text-xs">বিগত বছরের বোর্ড প্রশ্ন এবং অধ্যায়ভিত্তিক গুরুত্বপূর্ণ প্রশ্নোত্তর।</p>
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+                <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">২</div>
+                <h3 class="text-base font-bold text-white mb-2">Unknown Sources অন করুন</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">ফোনের সিকিউরিটি সেটিংস থেকে "Install Unknown Apps" বা "Unknown Sources" এলাও (Allow) করে দিন।</p>
             </div>
 
-            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-                <i class="fas fa-tachometer-alt text-cyan-400 text-xl mb-3 block"></i>
-                <h3 class="font-bold text-white text-base mb-1">দ্রুত এবং সহজ</h3>
-                <p class="text-slate-400 text-xs">যেকোনো ফোনে কোনো প্রকার ল্যাগ ছাড়াই একদম স্মুথ চলবে।</p>
+            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+                <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">৩</div>
+                <h3 class="text-base font-bold text-white mb-2">ইন্সটল করে পড়া শুরু করুন</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">ফাইলে ক্লিক করে "Install"-এ চাপুন। এবার অ্যাপ ওপেন করে আপনার ডিপার্টমেন্ট সিলেক্ট করে পড়াশোনা শুরু করুন!</p>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 max-w-4xl mx-auto px-5 border-t border-slate-800/80">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-2">সাধারণ কিছু প্রশ্ন ও উত্তর</h2>
+            <p class="text-slate-400 text-sm">অ্যাপটি ব্যবহার করার পূর্বে যা জানা প্রয়োজন</p>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+                <h3 class="font-bold text-white text-sm md:text-base flex items-center gap-2">
+                    <i class="fas fa-question-circle text-indigo-400"></i> অ্যাপটি কি সম্পূর্ণ বিনামূল্যে ব্যবহার করা যাবে?
+                </h3>
+                <p class="text-slate-400 text-xs md:text-sm mt-2 pl-6">
+                    হ্যাঁ, Politechnic Suggestion 2026 অ্যাপটি পলিটেকনিক শিক্ষার্থীদের জন্য সম্পূর্ণ ফ্রি করা হয়েছে।
+                </p>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+                <h3 class="font-bold text-white text-sm md:text-base flex items-center gap-2">
+                    <i class="fas fa-question-circle text-indigo-400"></i> সাজেশনগুলো কি ২০২৬ সালের বোর্ড পরীক্ষার উপযোগী?
+                </h3>
+                <p class="text-slate-400 text-xs md:text-sm mt-2 pl-6">
+                    অবশ্যই! কারিগরি শিক্ষা বোর্ডের সর্বশেষ সিলেবাস এবং প্রশ্নধারার ওপর গভীর পর্যালোচনা করে এই সুপার সাজেশনগুলো তৈরি করা হয়েছে।
+                </p>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
+                <h3 class="font-bold text-white text-sm md:text-base flex items-center gap-2">
+                    <i class="fas fa-question-circle text-indigo-400"></i> কোনো ইন্টারনেট ছাড়াও কি অ্যাপটি চলবে?
+                </h3>
+                <p class="text-slate-400 text-xs md:text-sm mt-2 pl-6">
+                    হ্যাঁ, অ্যাপের মূল সাজেশন ও নোটগুলো সম্পূর্ণ অফলাইন সাপোর্টেড, ফলে যেকোনো প্রত্যন্ত এলাকাতেও ইন্টারনেট ছাড়া পড়তে পারবেন।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Final CTA Banner -->
+    <section class="py-16 max-w-5xl mx-auto px-5">
+        <div class="bg-gradient-to-r from-blue-900/50 via-indigo-900/50 to-purple-900/50 border border-indigo-500/30 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3">পরীক্ষায় সেরা রেজাল্ট করার এখনই উপযুক্ত সময়!</h2>
+                <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto mb-6">দেরি না করে এখনই ডাউনলোড করে নিন পলিটেকনিক শিক্ষার্থীদের বিশ্বস্ত ডিজিটাল সহায়িকা।</p>
+                
+                <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="inline-flex items-center justify-center px-8 py-4 text-base md:text-lg font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-2xl shadow-xl shadow-indigo-600/40 hover:scale-105 active:scale-95 transition">
+                    <i class="fab fa-android text-2xl mr-3 text-green-400"></i>
+                    <span>ডাউনলোড করুন (ফ্রি APK)</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-900 py-5 text-center text-slate-600 text-xs">
-        <p>© 2026 Politechnic Suggestion. All rights reserved.</p>
+    <footer class="border-t border-slate-800/80 py-8 text-center text-slate-500 text-xs bg-slate-950">
+        <p class="mb-2">© 2026 Politechnic Suggestion. সর্বস্বত্ব সংরক্ষিত।</p>
+        <p class="text-slate-600">ডিপ্লোমা ইন ইঞ্জিনিয়ারিং শিক্ষার্থীদের পড়ালেখার সুবিধার্থে তৈরি একটি বিশেষ অ্যাপ।</p>
     </footer>
+
+    <!-- Floating Download Button on Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-slate-950/80 backdrop-blur-lg border-t border-slate-800 z-50">
+        <a href="https://github.com/princeshuvo089/politechnic-suggestion/releases/download/v1.0/Polytechnic.Suggestion.2026.apk" class="w-full flex items-center justify-center gap-2 py-3 bg-indigo-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-600/30">
+            <i class="fab fa-android text-green-400 text-lg"></i> ডাউনলোড APK (11 MB)
+        </a>
+    </div>
 
 </body>
 </html>
